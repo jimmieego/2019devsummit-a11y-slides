@@ -99,6 +99,8 @@ HTML semantics are therefore important in two ways:
 
 The best thing of all, is that we get those things for free whenever we use HTML as intended.
 
+Furthermore, if we spend the effort to craft our apps with a mind to semantics from the start, the apps will be able to adapt to specialized reading modes or devices (like the Apple Watch), as well as whatever the future holds with little to no additional effort.
+
 ## Common semantic HTML elements
 
 - `<ul>` or `<ol>`: a series of items in a list
@@ -129,7 +131,7 @@ When you use `<button>` element for clickable buttons and bind click event liste
 - `<footer>`
 - `<button>`
 
-Note: A survey of screen reader users in 2017 showed that 80% of respondents will use regions to navigate - but they can only do so if you choose to use them instead of wrapping everything in `<div>`.
+Note: Screen readers users can jump between different types of content, such as links, forms, headings, lists, and paragraphs. If all our content is marked up using `div`s and `span`s, we’re not giving screen readers a chance to index the valuable content.
 
 ## Focus
 
@@ -244,7 +246,7 @@ To fix it:
 </div>
 ```
 
-Note: Screen readers will report this as a checkbox.
+Note: Screen readers will report this as a checkbox. This can make the difference between a person being able to use a form or leaving the site out of frustration.
 
 ## Label and description
 
