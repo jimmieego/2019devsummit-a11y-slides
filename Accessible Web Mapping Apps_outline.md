@@ -9,7 +9,7 @@ Make content usable for everyone regardless of abilities.
 
 ## Wide range of disabilities
 
-<Inclusive design at Microsoft image>
+![Inclusive design at Microsoft: wide range of disabilities](images/MS_inslusive.jpg)
 
 ## Why is accessibility important?
 
