@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Park Locator</title>
+  <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.4/css/calcite-web.min.css">
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.4/js/calcite-web.js"></script>
+
+  <script src="https://js.arcgis.com/4.10/"></script>
+
+  <script src="js/main.js"></script>
+
+</head>
+
+<body class="custom-theme">
+  <div id="myModal" class="js-modal modal-overlay is-active" data-modal="splash">
+    <div class="modal-content column-12 app-body" role="dialog" aria-labelledby="modal">
+      <h3 class='trailer-half'>City of Boulder Parks</h3>
+      <p>View information about parks in Boulder and use the filter options to find parks with picnic areas, dog
+        friendly, wheelchair accessible and more. Visit <a target="_blank" href="https://bouldercolorado.gov/osmp">
+          Boulder OSMP</a>
+        for more details </p>
+      <p> Some legalize might go here </p>
+      <div class="text-right">
+        <button class="btn btn-clear js-modal-toggle app-button">I agree</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewDiv">
+    <div class="panel modifier-class panel-no-border panel-no-padding" id="sidebar">
+      <div class="panel-header">
+        <div>
+          <h1 class="title" id="title">City Parks</h1>
+          <!-- a11y issue no alt  alt="Logo Image"-->
+          <span class="logo" id="logo"><img src="http://www.arcgis.com/apps/MapJournal/resources/tpl/viewer/icons/esri-logo.png"></span>
+        </div>
+      </div>
+      <p role="banner" class="font-size--2 intro">Click on the map to view park details or enter park name or address
+        in the search box.</p>
+      <div class="panel-contents">
+        <div class="filter-tools">
+          <!-- A11y issue switch class to btn from divBtn and set div to button-->
+          <div class="divBtn btn-white btn-disabled" data-feature="ada" title="ADA Trail" aria-pressed="false"
+            aria-label="ADA Trail" aria-controls="results">
+            <span class="icon-wheelchair-accessible-black-24"></span>
+          </div>
+          <!-- A11y remove no-focus class-->
+          <button class="btn btn-white btn-disabled no-focus" data-feature="picnic" title="Picnic Area" aria-pressed="false"
+            aria-label="Picnic Area" aria-controls="results">
+            <span class="icon-picnic-area-black-24"></span>
+          </button>
+          <!-- A11y issue tab index set -->
+          <button class="btn btn-white btn-disabled" tabindex="3" data-feature="pets" title="Dog Friendly" aria-pressed="false"
+            aria-label="Dog Friendly" aria-controls="results">
+            <span class="icon-pets-on-leash-black-24"></span>
+          </button>
+          <button class="btn btn-white btn-disabled" data-feature="bikes" title="Bike Trail" aria-pressed="false"
+            aria-label="Bike Trail" aria-controls="results">
+            <span class="icon-bicycle-trail-black-32"></span>
+          </button>
+          <button class="btn btn-white btn-disabled" data-feature="horse" title="Horse Trail" aria-pressed="false"
+            aria-label="Horse Trail" aria-controls="results">
+            <span class="icon-horseback-riding-black-24"></span>
+          </button>
+        </div>
+        <p role="alert" aria-live="assertive" class="details font-size--3" id="results"></p>
+        <!--A11y issue no link to input for="searchContainer_input"-->
+        <label>Search Parks</label>
+        <div id="searchContainer" role="search" class="searching"></div>
+        <div id="detailsContainer" class="details"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
