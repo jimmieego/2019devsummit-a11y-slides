@@ -1,0 +1,267 @@
+html,
+body,
+#customApp {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#viewDiv {
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+}
+
+
+/* A11y Issues */
+
+.no-focus:focus {
+  outline: 0;
+}
+
+label {
+  color: #ccc;
+  margin: 8px 4px 0 6px !important;
+}
+
+.divBtn {
+  position: relative;
+  display: inline-block;
+  padding: 0.31rem 0.9rem;
+  width: auto;
+  color: white;
+  border: 1px solid #0079c1;
+  background-color: #0079c1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.05s linear;
+  transition: all 0.05s linear;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 0.9375rem;
+  line-height: 1.55rem;
+}
+
+
+/* End A11y issues */
+
+.panel-header {
+  color: #5c5c5c;
+  height: 75px;
+  border-bottom: solid 1px #ccc;
+}
+
+.title {
+  width: 190px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+  padding-left: 5px;
+  line-height: 55px;
+  overflow: hidden;
+  font-size: 22px;
+}
+
+.logo,
+.logo img {
+  display: inline-block;
+  max-width: 100px;
+  max-height: 45px;
+  vertical-align: middle;
+}
+
+#sidebar.bottom-panel {
+  z-index: 99;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 100%;
+}
+
+#detailsContainer {
+  background-color: #f8f8f8;
+}
+
+#searchContainer {
+  width: 90%;
+  margin: 0.5em auto;
+}
+
+.filter-tools {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro {
+  padding: 0.3em;
+  margin-bottom: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.details {
+  margin: 0.5em;
+  text-align: center;
+}
+
+div.esri-menu.esri-search__suggestions-menu {
+  z-index: 30;
+}
+
+.custom-theme .esri-popup--is-docked {
+  margin: 0;
+}
+
+.custom-theme .esri-popup__main-container {
+  box-shadow: none !important;
+}
+
+.custom-theme .esri-popup__position-container {
+  margin-top: 1em;
+  width: 300px !important;
+  height: 100%;
+  position: initial !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.custom-theme .esri-popup__position-container {
+  width: 300px;
+}
+
+.custom-theme .esri-popup--shadow {
+  box-shadow: none;
+}
+
+.custom-theme .esri-popup-renderer {
+  background-color: #f8f8f8;
+}
+
+.custom-theme .esri-popup__main-container {
+  background-color: #f8f8f8;
+  max-height: 100% !important;
+}
+
+.custom-theme .esri-popup__content {
+  height: 100% !important;
+}
+
+.esri-popup__pointer {
+  display: none;
+}
+
+
+/*Styles for the button icons */
+
+button[aria-pressed="true"],
+[role="button"][aria-pressed="true"] {
+  border: 2px solid #333;
+  border-style: inset;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(../images/sprite.svg);
+  color: #fff;
+  text-align: center;
+}
+
+.icon-wheelchair-accessible-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: 0 0;
+}
+
+.icon-trailhead-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -32px 0;
+}
+
+.icon-recycling-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -64px 0;
+}
+
+.icon-picnic-area-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -96px 0;
+}
+
+.icon-pets-on-leash-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -128px 0;
+}
+
+.icon-litter-receptacle-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -160px 0;
+}
+
+.icon-horseback-riding-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -192px 0;
+}
+
+.icon-fishing-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -224px 0;
+}
+
+.icon-campsite-black-24 {
+  width: 16px;
+  height: 16px;
+  background-position: -256px 0;
+}
+
+.icon-bicycle-trail-black-32 {
+  width: 16px;
+  height: 16px;
+  background-position: -288px 0;
+}
+
+#detailsContainer {
+  overflow: auto;
+  max-height: 400px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.25em;
+}
+
+li {
+  cursor: pointer;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #ccc;
+}
