@@ -24,6 +24,12 @@ Make content usable for everyone regardless of abilities.
 - Working accessibility into new features
 - Sharing knowledge and best practices
 
+## Accessibility presentations at DevSummit
+
+- DIY Accessibility. Wednesday, March 6. 5:30pm - 6:30pm.
+- Accessible Web Mapping Apps. Thursday, March 7. 9am - 10am.
+- Improving Accessibility with ArcGIS Online Web Apps. Thursday, March 7. 2:30pm - 3:00pm
+
 ## Web Content Accessibility Guidelines
 
 <WCAG 2.0 and 2.1 images>
@@ -90,7 +96,7 @@ Note: The browser does not know that the `<div>` element is intended as a button
 
 ## No need to reinvent the wheel
 
-For semantic netural elements like `<span>` and `<div>`, it is possible to use CSS, JavaScript, and ARIA (we will cover ARIA later) to polyfill the missing semantic information, and to provide some (but not all) of the styling and behaviors associated with a semantic element. That takes a lot more code, a lot more effort, and it usually results in a very brittle implementation compared to that of a native html element.
+For semantic neutral elements like `<span>` and `<div>`, it is possible to use CSS, JavaScript, and ARIA (we will cover ARIA later) to polyfill the missing semantic information, and to provide some (but not all) of the styling and behaviors associated with a semantic element. That takes a lot more code, a lot more effort, and it usually results in a very brittle implementation compared to that of a native html element.
 
 HTML semantics are therefore important in two ways:
 
@@ -142,7 +148,7 @@ Focus refers to the singular element in the page that is able to be acted upon v
 Don't do this:
 
 ```css
-:focus {
+*:focus {
     outline: none;
 }
 ```
