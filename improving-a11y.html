@@ -22,55 +22,242 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style>
+			.reveal pre {
+				width: 50%;
+			}
+
+			.reveal p {
+				line-height: 1.5;
+			}
+
+			.reveal ul {
+				line-height: 1.5;
+			}
+
+			.reveal .twocol {
+				display: grid;
+				grid-template-columns: 1.5fr 1fr;
+				text-align: left;
+			}
+
+			.reveal p,
+			.reveal ul {
+				font-size: 50px;
+			}
+
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<!-- Title slide -->
 				<section data-background="img/2019/devsummit/bg-1.png" data-background-size="cover" style="padding-left: 80px;">
-					<h1 style="text-align: left; font-size: 80px;">Improving Accessibility with ArcGIS Online Web Apps</h1>
-					<p style="text-align: left; font-size: 30px;">Kelly Hutchins</p>
-					<p style="text-align: left; font-size: 30px;">Tao Zhang</p>
-    			    <p style="text-align: left; font-size: 30px;">slides: <a href="http://bit.ly/abc123"><code>http://bit.ly/abc123</code></a></p>
+					<h1 style="text-align: left; font-size: 80px; margin-left: 65px; width: 15em;">Improving Accessibility with ArcGIS Online Web Apps</h1>
+					<p style="text-align: left; font-size: 30px; margin-top: 2em; margin-left: 65px;">Kelly Hutchins</p>
+					<p style="text-align: left; font-size: 30px; margin-left: 65px;">Tao Zhang</p>
+    			    <p style="text-align: left; font-size: 30px; margin-top: 2em; margin-left: 65px;">slides: <a href="https://arcg.is/08yqfD0"><code>https://arcg.is/08yqfD0</code></a></p>
 				</section>
+
 				<section data-markdown data-background="img/2019/devsummit/bg-2.png">
 					<textarea data-template>
-						## Headline Here 2
+						## What is accessibility?
 
-						* Bullet [points here](http://hakim.se).
+						Make content usable for everyone regardless of abilities.
 					</textarea>
 				</section>
 
 				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
 					<textarea data-template>
-						## Headline Here 3
+						## Why is accessibility important?
 
-						* Bullet [points here](http://hakim.se).
+						- The ADA and Section 508
+						- People with different abilities should have equal access
+						- Good accessibility is good user experience
 					</textarea>
 				</section>
 
+				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Accessibility presentations
+
+						|Title|Time|
+						|---|---|
+						|DIY Accessibility|Wed, March 6. 5:30pm - 6:30pm|
+						|Accessible Web Mapping Apps|Thu, March 7. 9am - 10am|
+						|Improving Accessibility with ArcGIS Online Web Apps|Thu, March 7. 2:30pm - 3:00pm|
+
+
+					</textarea>
+				</section>
+
+				<!-- Outline -->
 				<section data-markdown data-background="img/2019/devsummit/bg-4.png">
 					<textarea data-template>
-						## Headline Here 4
+						## What we will cover today
 
-						* Bullet [points here](http://hakim.se).
+						- Test accessibility
+						- Fix accessibility issues
+						- Tools
+						- Best practices
+					</textarea>
+				</section>
+				
+				<!-- Demo app link -->
+				<section data-markdown data-background="img/2019/devsummit/bg-6.png">
+					<textarea data-template>
+						## Demo app
+
+						Link: <a href="https://arcg.is/1O5u09"><code>https://arcg.is/1O5u09</code></a>
 					</textarea>
 				</section>
 
-				<section data-markdown data-background="img/2019/devsummit/bg-5.png">
+				<!-- Color contrast -->
+				<section data-markdown data-background="img/2019/devsummit/bg-6.png">
 					<textarea data-template>
-						## Headline Here 5
+						## Color contrast
 
-						* Bullet [points here](http://hakim.se).
+						- [WCAG 1.4.3](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html): Text needs to have
+						contrast ratio of at least 4.5:1.
+						- [Contrast ratio](https://contrast-ratio.com/)
+						- [Color cube](https://oomphinc.github.io/colorcube/)
+						- Color picker in Chrome DevTools.
+					</textarea>
+				</section>
+
+				<!-- Alternate text -->
+				<section data-markdown data-background="/img/2019/devsummit/bg-6.png">
+					<textarea data-template>
+						## Alternate text
+
+						- [WCAG 1.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html): Non-text content has text alternative. 
+						- If image is decorative, use `alt=""`.
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Write effective alternate text
+
+						- Think about how users will be doing with the information
+						- Be accurate in presenting the content in images
+						- Be succinct
+						- No need to use the phrase "image of ..." to describe images
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Alternate text demo
+
+						- [Empty alt](https://developers.arcgis.com/javascript/latest/sample-code/widgets-basemapgallery/live/index.html)
+						- [Descriptive alt](https://story.maps.arcgis.com/apps/MapJournal/index.html?appid=2b1c793f464b4cd2944a0b9700c0dc48)
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Landmark
+
+						Use both HTML 5 elements and ARIA landmarks in the same element.
+
+						| HTML | ARIA Role |
+						|----------|--------------------|
+						| `<header>` | `role="banner"` |
+						| `<nav>` | `role="navigation"` |
+						| `<main>` | `role="main"` |
+						| `<footer>` | `role="contentinfo"` |
+						<p style="margin-top: 1.5em; font-size: 0.8em;">Reference: <a href="https://www.scottohara.me/blog/2018/03/03/landmarks.html">Accessible Landmarks</a></p>
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Focus and tab order
+
+						<ul>
+							<li class="fragment">[WCAG 2.4.7](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html): Interactive
+							elements should have clear focus.</li>
+							<li class="fragment">[WCAG 1.3.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html): Navigation (tab)
+							order should be logical and intuitive.</li>
+							<li class="fragment">[WCAG 2.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html): Keyboard users
+							should be able to use functionalities using keyboard only.</li>
+							<li class="fragment">[WCAG 2.1.2](http://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html): Content does not "trap"
+							keyboard focus within subsections.</li>
+						</ul>
 					</textarea>
 				</section>
 
 				<section data-markdown data-background="/img/2019/devsummit/bg-6.png">
 					<textarea data-template>
-						## Headline Here 6
+						## Focus
 
-						* Bullet [points here](http://hakim.se).
+						Don't do this:
+						
+						```css
+						*:focus {
+							outline: 0;
+						}
+						```
 					</textarea>
 				</section>
+
+				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Focus
+
+						Keep the browser's default focus styling.  
+						Or implement custom focus style.
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Tab order
+
+						<p style="text-align: left; margin-left: 25px;">Tab order should match intended reading order.</p>
+
+						- `tabindex="0"`: let DOM structure determine focus order.
+						- `tabindex="-1"`: necessary for programmatically moving focus (e.g., error message, menus, radio buttons, etc.)
+						- `tabindex="3"`: anti-pattern.
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## The `<button>` element
+
+						<p style="text-align: left;">When you use `<button>` element, you get a lot of functionality for free:</p>
+
+						- Buttons are automatically focusable.
+						- Screen readers will announce the button in focus and offer ways to click the button.
+						- Space and Enter keys are automatically supported when binding a click event listener to a button.
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Semantic HTML
+
+						- Choose the right HTML element to reflect content structure and meaning.
+						- `<div>` and `<span>` are semantically neutral.
+						- Significantly more work to polyfill the missing semantic information and expected behavior.
+					</textarea>
+				</section>
+
+				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+					<textarea data-template>
+						## Dialog
+
+						- When a dialog opens, focus moves to an element inside the dialog.
+						- Focus should be "trapped" inside the dialog until the dialog is dismissed.
+						- Focus should return to the element that opens the dialog.
+
+						<p style="margin-top: 1.5em; font-size: 0.8em;">Reference: <a href="http://w3c.github.io/aria-practices/#dialog_modal">ARIA Best Practices - Dialog</a></p>
+					</textarea>
+				</section>
+
 
 				<!-- ESRI LOGO SLIDE: -->
 				<section data-markdown data-background="img/2019/devsummit/bg-esri.png">
