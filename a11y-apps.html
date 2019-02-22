@@ -15,6 +15,42 @@
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
 
+  <style>
+      
+      .reveal .twocol {
+        display: grid;
+        grid-template-columns: 55% 30%;
+        justify-items: center;
+      }
+
+      .reveal .twocol.equal {
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.85em;
+      }
+
+      .reveal ul,
+      .reveal p {
+          width: 80%;
+      }
+
+      .reveal ul {
+          line-height: 1.5;
+      }
+
+      .reveal p {
+          margin: auto;
+          text-align: left;
+      }
+
+      .reveal section img {
+          border: 1px solid white;
+      }
+
+      .reveal pre {
+          max-width: 80%;
+      }
+  </style>  
+    
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement('link');
@@ -28,59 +64,638 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-background="img/2019/devsummit/bg-1.png" data-background-size="cover" style="padding-left: 80px;">
-        <h1 style="text-align: left; font-size: 80px;">Accessible Web Mapping Apps</h1>
-        <p style="text-align: left; font-size: 30px;">Kelly Hutchins</p>
-        <p style="text-align: left; font-size: 30px;">Tao Zhang</p>
-        <p style="text-align: left; font-size: 30px; margin-top: 40px;">slides: <a href="http://bit.ly/abc123"><code>http://bit.ly/abc123</code></a></p>
-      </section>
-      <section data-markdown data-background="img/2019/devsummit/bg-2.png">
-        <textarea data-template>
-						## Headline Here 2
+        <!-- Title -->
+        <section data-background="img/2019/devsummit/bg-1.png" data-background-size="cover" style="padding-left: 80px;">
+            <h1 style="width: 80%; text-align: left; font-size: 80px;">Accessible Web Mapping Apps</h1>
+            <p style="font-size: 30px; margin-left: 0;">Kelly Hutchins</p>
+            <p style="font-size: 30px; margin-left: 0;">Tao Zhang</p>
+            <p style="font-size: 30px; margin-top: 40px; margin-left: 0;">slides: <a href="https://arcg.is/1OPTCu"><code>https://arcg.is/1OPTCu</code></a></p>
+        </section>
+        
+        <section data-markdown data-background="img/2019/devsummit/bg-2.png">
+            <textarea data-template>
+                ## What is accessibility?
 
-						* Bullet [points here](http://hakim.se).
-					</textarea>
-      </section>
+                Make content usable for everyone regardless of abilities.
+            </textarea>
+        </section>
 
-      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
-        <textarea data-template>
-						## Headline Here 3
+        <section data-background="img/2019/devsummit/bg-3.png">
+            <h2>Wide range of disabilities</h2>				         
+            <img src="images/MS_inclusive.jpg" alt="Inclusive design at Microsoft: wide range of disabilities" style="width: 18%; height: 18%;" />
+            <p style="font-size: 0.7em; text-align: center;">Source: <a href="https://www.microsoft.com/design/inclusive/">Inclusive design at Microsoft</a></p>
+        </section>
 
-						* Bullet [points here](http://hakim.se).
-					</textarea>
-      </section>
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Why is accessibility important?
 
-      <section data-markdown data-background="img/2019/devsummit/bg-4.png">
-        <textarea data-template>
-						## Headline Here 4
+                - The ADA and Section 508
+                - People with different abilities should have equal access
+                - Good accessibility is good user experience
+            </textarea>
+        </section>
 
-						* Bullet [points here](http://hakim.se).
-					</textarea>
-      </section>
+        <section data-background="img/2019/devsummit/bg-3.png">
+            <h2>How is Esri doing?</h2>
+            <div class="twocol">
+                <ul>    
+                    <li>Reviewing products internally for compliance</li>
+                    <li>Fixing accessibility issues</li>
+                    <li>Working accessibility into new features</li>
+                    <li>Sharing knowledge and best practices</li>
+                </ul>
+                <img style="margin-left: 3em;" src="images/storymap-announcement2.png">
+            </div>
+        </section>
 
-      <section data-markdown data-background="img/2019/devsummit/bg-5.png">
-        <textarea data-template>
-						## Headline Here 5
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Accessibility presentations
 
-						* Bullet [points here](http://hakim.se).
-					</textarea>
-      </section>
+                |Title|Time|
+                |---|---|
+                |DIY Accessibility|Wed, March 6. 5:30pm - 6:30pm|
+                |Accessible Web Mapping Apps|Thu, March 7. 9am - 10am|
+                |Improving Accessibility with ArcGIS Online Web Apps|Thu, March 7. 2:30pm - 3:00pm|
+            </textarea>
+        </section>
 
-      <section data-markdown data-background="/img/2019/devsummit/bg-6.png">
-        <textarea data-template>
-						## Headline Here 6
+        <section data-markdown data-background="/img/2019/devsummit/bg-6.png">
+            <textarea data-template>
+                ## WCAG
 
-						* Bullet [points here](http://hakim.se).
-					</textarea>
-      </section>
+                <p style="text-align: center;">Web Content Accessibility Guidelines</p>
+            </textarea>
+        </section>
 
-      <!-- ESRI LOGO SLIDE: -->
-      <section data-markdown data-background="img/2019/devsummit/bg-esri.png">
-      </section>
+        <section data-background="/img/2019/devsummit/bg-3.png">
+            <img src="images/wcag.png" alt="Screenshots of WCAG 2.0 and 2.1 official docs" />
+        </section>
 
-      <!-- SURVEY SLIDE: -->
-      <section data-markdown data-background="img/2019/devsummit/bg-rating.png">
-      </section>
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## WCAG 2.1
+
+                <p>17 additional success criteria to address:</p>
+
+                - mobile accessibility
+                - people with low vision
+                - people with cognitive and learning disabilities
+
+                <p style="margin-top: 3em; font-size: 0.7em;">Reference: [What’s New in WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)</p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-4.png">
+            <textarea data-template>
+                ## What we will cover today
+
+                - Semantics
+                - Focus and keyboard access
+                - ARIA and custom components
+                - Dev tools
+                - App demos
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-2.png">
+            <textarea data-template>
+                ## Semantics
+
+                Choose the right HTML element to reflect content structure and meaning.
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ### Strcture
+
+                - Common understanding of what each element represents and does.
+                - Browsers and other user agents provide default functionality and styling.
+            </textarea>
+        </section>
+
+        <section data-background="img/2019/devsummit/bg-3.png">
+            <h3>Structure example</h3>
+            <pre><code>
+            <h2>Popup settings</h2>
+            <span class="heading-2">Popup settings</span> <!-- Don't do this -->
+            </code></pre>
+            
+
+            <ul style="font-size: 0.8em; width: 80%;">
+                <li>The browser does not recognize the second structure as a level 2 heading.</li>
+                <li>The <span class="code">&lt;span&gt; </span> element is semantically neutral.</li>
+            </ul>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ### Meaning
+
+                <p style="text-align: left; margin-bottom: 20px;">Most HTML elements have an implicit role that defines the element’s purpose:</p>
+
+                - `<a>`: “link” 
+                - `<img>`: “graphic” or “image”
+                - `<header>`: “banner”
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                <h3>Meaning example</h3>
+
+                ```html
+                <button>Save changes</button>
+
+                <!-- Don't do this -->
+                <div class="btn btn--primary">Save changes</div> 
+                ```
+                
+                <ul style="font-size: 0.8em; width: 80%;">
+                    <li>The browser does not know that the `<div>` element is intended as a button</li>
+                    <li>The `<div>` element does not have an implicit role or accessible name.</li>
+                </ul>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Why semantics is important
+
+                - Consistent understanding of content structure and native behavior. <!-- .element: class="fragment" -->
+                - Clear communication of content’s meaning and purpose. <!-- .element: class="fragment" -->
+                - We get structure and meaning for free with semantic elements. <!-- .element: class="fragment" -->
+                - Significant more work to polyfill semantic neutral elements. <!-- .element: class="fragment" -->
+            
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Semantic HTML elements
+
+                - `<ul>` or `<ol>`: a series of items in a list
+                - `<p>`: paragraph
+                - `<table>`: tabular data
+                - `<button>`: a clickable button
+                - `<label>`: text label for a form control
+                
+                <p style="margin-top: 50px;">
+                    <ul style="font-size: 0.5em;">References:
+                        <li>[An Overview of HTML5 Semantics](https://codepen.io/mi-lee/post/an-overview-of-html5-semantics)</li>
+                        <li>[HTML elements organized by purpose](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)</li>
+                    </ul>
+                </p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Use `button`
+
+                - Buttons are automatically focusable. <!-- .element: class="fragment" -->
+                - Screen readers will announce button in focus and offer ways to click button. <!-- .element: class="fragment" -->
+                - Space and Enter keys are automatically supported when binding a click event listener to a button. <!-- .element: class="fragment" -->
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Alternatives of `<div>`
+
+                - `<section>`
+                - `<article>`
+                - `<ul>` or `<ol>`
+                - `<header>`
+                - `<footer>`
+                - `<button>`
+                
+                <p style="font-size: 0.7em; margin-top: 1em;">Semantic elements help screen reader index page structure and content.</p>
+            </textarea>
+        </section>
+        
+        <section data-markdown data-background="img/2019/devsummit/bg-2.png">
+            <textarea data-template>
+                ## Focus
+                
+                - The element with focus will receive input events.
+                - Tab key to cycle through focusable elements.
+                - Users should visually tell which element is in focus.
+                
+            </textarea>
+        </section>
+        
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Do not remove focus
+                
+                ```css
+                *:focus {
+                    outline: none; /* Don't do this */
+                }
+                ```
+                
+                <p style="text-align: center; margin-top: 1.5em;">Ensuring that native or custom focus styling is visible.</p> <!-- .element: class="fragment" -->
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-2.png">
+            <textarea data-template>
+                ## Focus order
+                
+                The order in which focus proceeds forward and backward through interactive elements via Tab or Shift + Tab.
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Manage focus
+                
+                - Only focus elements that keyboard users need to interact with.
+                - Focus should not be trapped at one particular element, except for modal dialogs.
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Set `tabindex`
+                
+                - `tabindex="0"`: let DOM structure determine focus order.
+                - `tabindex="-1"`: necessary for programmatically moving focus (e.g., error message, menus, radio buttons, etc.)
+                - `tabindex="2"`: anti-pattern.
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Focus management example
+                
+                ```html
+                <menu-list>
+                <!-- After the user presses the down arrow key, focus the next available child -->
+                <menu-item tabindex="0">Map</menu-item>
+
+                <!-- call .focus() on this element -->
+                <menu-item tabindex="-1">Layer</menu-item>
+                <menu-item tabindex="-1">Scene</menu-item>
+                <menu-item tabindex="-1">Tool</menu-item>
+                <menu-item tabindex="-1">Data</menu-item>
+                </menu-list>
+                ```
+
+                <p style="font-size: 0.6em; margin-top: 1.5em;">[CodePen link](https://codepen.io/jimmieego/pen/Obdebp)</p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Plan for keyboard interactions
+
+                <div class="twocol equal">
+                    <div class="fragment">
+                        <p style="margin-left: 0; width: 100%;">Common interactions may include:</p>
+                        <ul style="width: 100%;">
+                            <li>Exiting the current component</li>
+                            <li>Submitting</li>
+                            <li>Moving position or browsing</li>
+                        </ul>
+                    </div>
+                    <div class="fragment">
+                        <p style="margin-left: 0; width: 100%;">Common keys to add actions to:</p>
+                        <ul style="width: 100%;">
+                            <li>Enter (keyCode 13)</li>
+                            <li>Space (keyCode 32)</li>
+                            <li>Arrow keys (keyCode 37-40)</li>
+                            <li>ESC (keyCode 27)</li>
+                            <li>Tab (keyCode 9)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-6.png">
+            <textarea data-template>
+                ## ARIA
+
+                - WAI-ARIA: Web Accessibility Initiative – Accessible Rich Internet Applications.
+                - ARIA provides a way for developers to modify and augment accessibility  of standard DOM element.
+                
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                <div class="twocol equal">
+                    ![DOM and accessibility tree](images/aria_a11tree_1.jpg)
+
+                    ![DOM with ARIA and accessibility tree](images/aria_a11tree_2.jpg)
+                </div>
+
+                <p style="font-size: 0.7em; margin-top: 1em; text-align: center;" class="fragment">ARIA doesn't augment inherent behavior like focusable and keyboard event listeners.</p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Why do we need ARIA?
+
+                Certain semantics and design patterns make it impossible to use native HTML semantics. Examples:
+
+                - a pop-up menu, no standard HTML element.
+                - a semantic characteristic "the user needs to know about this as soon as possible".
+                
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## ARIA attributes
+
+                | Type | Purpose | Examples |
+                |------|---------|----------|
+                | **Roles** | Meaning of an element | `tooltip`, `tablist`, `search` |
+                | **Properties** | Relationships and functions | `aria-required`, `aria-controls`, `aria-label`, `aria-labelledby` |
+                | **States** | Current interaction states | `aria-checked`, `aria-expanded`, `aria-hidden` |
+                
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## ARIA example
+
+                ```html
+                <div tabindex="0" class="checkbox checkbox--checked" >
+                    Show premium content
+                </div>
+                ```
+
+                Sighted users see a checkbox as a result of the CSS. However, non-sighted users will not know this is meant to be a checkbox. <!-- .element: class="fragment" -->
+                
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## ARIA example (fixed)
+
+                ```html
+                <div tabindex="0" class="checkbox checkbox--checked" 
+                    role="checkbox" checked aria-checked="true">
+                    Show premium content
+                </div>
+                ```
+
+                Screen readers will report this as a checkbox. This can make the difference between a person being able to use a form or leaving the site out of frustration. <!-- .element: class="fragment" -->
+                
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ## Label and description
+
+                - `aria-label`: specifies a string as accessible label and overrides native labelling.
+                - `aria-labelledby`: specifies `id` of another element (or a list of `id`s). 
+                - `aria-describedby`: provides accessible description for an element. 
+                
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ### `aria-label` example
+
+                <p style="text-align: center;">
+                ![aria-label example](images/aria-label.jpg) 
+                </p>
+
+                <p style="font-size: 0.6em; text-align: center; ">
+                    Source: [Google Developers - ARIA Labels and Relationships](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships)
+                </p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ### `aria-labelledby` example
+
+                <p style="text-align: center;">
+                ![aria-labelledby example](images/aria-labelledby.jpg) 
+                </p>
+
+                <p style="font-size: 0.6em; text-align: center; ">
+                    Source: [Google Developers - ARIA Labels and Relationships](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships)
+                </p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ### `aria-describedby` example
+
+                <p style="text-align: center;">
+                ![aria-describedby example](images/aria-describedby.jpg) 
+                </p>
+
+                <p style="font-size: 0.6em; text-align: center; ">
+                    Source: [Google Developers - ARIA Labels and Relationships](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships)
+                </p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+                ### Relationship
+
+                - `aria-controls`: indicates an element "controls" another element.
+                - `aria-owns`: indicates an element should be treated as parent of another separate element.
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## `aria-controls` example
+
+                ```html
+                <div role="scrollbar" aria-controls="main"></div>
+                <div id="main">
+                <!-- . . . -->
+                </div>
+                ```
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## `aria-owns` example
+
+                <p style="text-align: center;">
+                    ![aria-owns example](images/aria-owns.jpg) 
+                </p>
+        
+                <p style="font-size: 0.6em; text-align: center; ">
+                    Source: [Google Developers - ARIA Labels and Relationships](https:developers.google.com/web/fundamentals/accessibility/semantics-ariaria-labels-and-relationships)
+                </p>
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## States
+
+                - `aria-expanded`: indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+                - `aria-hidden`: excludes current element from assistive technology.
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## `aria-expanded` example
+
+                ```html
+                <button aria-expanded="false" aria-controls="expandable-list-1">
+                    Expand List
+                </button>
+                <ul id="expandable-list-1">
+                    <li><a href="http://example.com">Sample Link</a></li>
+                    <li><a href="http://example.com">Sample Link 2</a></li>
+                    <li><a href="http://example.com">Sample Link 3</a></li>
+                </ul>
+                ```
+
+                <p style="font-size: 0.8em;">`aria-controls` is needed here because the two elements are not parent and child.</p>
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## ARIA best practices
+
+                Don't change native semantics, unless you really have to.
+
+                ```html
+                <!-- Do this -->
+                <h2><button>heading button</button></h2>
+
+                <!-- Don't do this -->
+                <h2 role="button">heading button</h2>
+                ```
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## ARIA best practices
+
+                All interactive elements must be usable with keyboard.
+
+                <p style="margin-top: 1.5em;">Example: if using `role="button"`, add `tabindex="0"` and support of Enter and Space keys.</p>
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## ARIA best practices
+
+                Don't use `role="presentation"` or `aria-hidden="true"` on a visible and focusable element.
+
+                ```html
+                <!-- Don't do this -->
+                <!-- This will result in focusing on "nothing". -->
+                <button role="presentation">Press me</button>
+                <button aria-hidden="true">Press me</button>
+                ```
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## ARIA best practices
+
+                All interactive elements must have an accessible label or name.
+
+                ```html
+                <!-- Do this -->
+                <label>
+                    Email
+                    <input type="text" placeholder="name@example.com">
+                </label>
+                ```
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## Accessible custom components
+
+                - [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/)
+                - [WAI-ARIA Authoring Practices](http://w3c.github.io/aria-practices/)
+                - [The A11Y Project](https://a11yproject.com/)
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## Dev tools
+
+                - [axe-core](https://github.com/dequelabs/axe-core)
+                - Chrome: [Accessibility experiment](https://gist.github.com/marcysutton/0a42f815878c159517a55e6652e3b23a)
+                - Firefox: [Accessibility Inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+            <textarea data-template>
+
+                ## App Demos
+
+                - Esri Canada: [Accessible App of Electric Charging Stations](https://arcgis103.esri.ca/WCAG-Configurable-Template-Test/?appid=e951691e3893444ea64e7c29d086e30c)
+                - Esri: [a11y-map](https://github.com/Esri/a11y-map)
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background="img/2019/devsummit/bg-4.png">
+            <textarea data-template>
+                ## What covered today
+
+                - Semantics
+                - Focus and keyboard access
+                - ARIA and custom components
+                - Dev tools
+                - App demos
+            </textarea>
+        </section>
+
+        <!-- ESRI LOGO SLIDE: -->
+        <section data-markdown data-background="img/2019/devsummit/bg-esri.png">
+        </section>
+
+        <!-- SURVEY SLIDE: -->
+        <section data-markdown data-background="img/2019/devsummit/bg-rating.png">
+        </section>
 
 
     </div>

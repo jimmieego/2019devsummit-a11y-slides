@@ -282,7 +282,7 @@ Note: Screen readers will report this as a checkbox. This can make the differenc
 ```html
 <div role="scrollbar" aria-controls="main"></div>
 <div id="main">
-. . .
+<!-- . . . -->
 </div>
 ```
 
