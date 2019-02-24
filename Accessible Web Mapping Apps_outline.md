@@ -379,6 +379,7 @@ References:
 - [axe-core](https://github.com/dequelabs/axe-core)
 - Chrome: [Accessibility experiment](https://gist.github.com/marcysutton/0a42f815878c159517a55e6652e3b23a)
 - Firefox: [Accessibility Inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
+- [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 
 ## App Demos
 
