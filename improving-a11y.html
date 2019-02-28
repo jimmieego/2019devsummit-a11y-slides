@@ -2,88 +2,96 @@
 <!-- Copyright (c) 2019 Environmental Systems Research Institute, Inc.
      Apache-2.0 -->
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Improving Accessibility with ArcGIS Online Web Apps</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/dev-summit-2019.css">
+  <title>Improving Accessibility with ArcGIS Online Web Apps</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/dev-summit-2019.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<style>
-			.reveal pre {
-				width: 50%;
-			}
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
 
-			.reveal p {
-				line-height: 1.5;
-			}
+  </script>
 
-			.reveal ul {
-				line-height: 1.5;
-			}
+  <style>
+    .reveal pre {
+      width: 50%;
+    }
 
-			.reveal .twocol {
-				display: grid;
-				grid-template-columns: 1.5fr 1fr;
-				text-align: left;
-			}
+    .reveal p {
+      line-height: 1.5;
+    }
 
-			.reveal p,
-			.reveal ul {
-				font-size: 50px;
-			}
+    .reveal ul {
+      line-height: 1.5;
+    }
 
-			.reveal p {
-				margin-top: 0;
-			}
+    .reveal .twocol {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      text-align: left;
+    }
 
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!-- Title slide -->
-				<section data-background="img/2019/devsummit/bg-1.png" data-background-size="cover" style="padding-left: 80px;">
-					<h1 style="text-align: left; font-size: 80px; margin-left: 65px; width: 15em;">Improving Accessibility with ArcGIS Online Web Apps</h1>
-					<p style="text-align: left; font-size: 30px; margin-top: 2em; margin-left: 65px;">Kelly Hutchins</p>
-					<p style="text-align: left; font-size: 30px; line-height: 1; margin-left: 65px;">Tao Zhang</p>
-    			    <p style="text-align: left; font-size: 30px; margin-top: 2em; margin-left: 65px;">slides: <a href="https://arcg.is/08yqfD0"><code>https://arcg.is/08yqfD0</code></a></p>
-				</section>
+    .reveal p,
+    .reveal ul {
+      font-size: 50px;
+    }
 
-				<section data-markdown data-background="img/2019/devsummit/bg-2.png">
-					<textarea data-template>
+    .reveal p {
+      margin-top: 0;
+    }
+
+    .reveal section img {
+      border: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title slide -->
+      <section data-background="img/2019/devsummit/bg-1.png" data-background-size="cover" style="padding-left: 80px;">
+        <h1 style="text-align: left; font-size: 80px; margin-left: 65px; width: 15em;">Improving Accessibility with
+          ArcGIS Online Web Apps</h1>
+        <p style="text-align: left; font-size: 30px; margin-top: 2em; margin-left: 65px;">Kelly Hutchins</p>
+        <p style="text-align: left; font-size: 30px; line-height: 1; margin-left: 65px;">Tao Zhang</p>
+        <p style="text-align: left; font-size: 30px; margin-top: 2em; margin-left: 65px;">slides: <a href="https://arcg.is/08yqfD0"><code>https://arcg.is/08yqfD0</code></a></p>
+      </section>
+
+      <section data-markdown data-background="img/2019/devsummit/bg-2.png">
+        <textarea data-template>
 						## What is accessibility?
 
 						Make content usable for everyone regardless of abilities.
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Why is accessibility important?
 
 						- The ADA and Section 508
 						- People with different abilities should have equal access
 						- Good accessibility is good user experience
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Accessibility presentations
 
 						|Title|Time|
@@ -94,11 +102,11 @@
 
 
 					</textarea>
-				</section>
+      </section>
 
-				<!-- Outline -->
-				<section data-markdown data-background="img/2019/devsummit/bg-4.png">
-					<textarea data-template>
+      <!-- Outline -->
+      <section data-markdown data-background="img/2019/devsummit/bg-4.png">
+        <textarea data-template>
 						## What we will cover today
 
 						- Test accessibility
@@ -106,42 +114,76 @@
 						- Tools
 						- Best practices
 					</textarea>
-				</section>
-				
-				<!-- Demo app link -->
-				<section data-markdown data-background="img/2019/devsummit/bg-6.png">
-					<textarea data-template>
+      </section>
+
+      <!-- Demo app link -->
+      <section data-markdown data-background="img/2019/devsummit/bg-6.png">
+        <textarea data-template>
 						## Demo app
 
 						Link: <a href="https://arcg.is/1O5u09"><code>https://arcg.is/1O5u09</code></a>
 					</textarea>
-				</section>
+      </section>
 
-				<!-- Color contrast -->
-				<section data-markdown data-background="img/2019/devsummit/bg-6.png">
-					<textarea data-template>
+      <!-- Color contrast -->
+      <section data-markdown data-background="img/2019/devsummit/bg-6.png">
+        <textarea data-template>
 						## Color contrast
 
 						- [WCAG 1.4.3](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html): Text needs to have
 						contrast ratio of at least 4.5:1.
 						- [Contrast ratio](https://contrast-ratio.com/)
-						- [Color cube](https://oomphinc.github.io/colorcube/)
 						- Color picker in Chrome DevTools.
 					</textarea>
-				</section>
+      </section>
 
-				<!-- Alternate text -->
-				<section data-markdown data-background="/img/2019/devsummit/bg-6.png">
-					<textarea data-template>
+      <section data-markdown data-background="img/2019/devsummit/bg-6.png">
+        <textarea data-template>
+						## Symbol colors
+
+						- [Color cube](https://oomphinc.github.io/colorcube/)
+						- [ColorBrewer 2.0](http://colorbrewer2.org)
+						- Blog article: [How to Make Smart Color Choices in Your Maps](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/mapping/how-to-make-smart-color-choices-in-your-maps/) 
+					</textarea>
+      </section>
+
+      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+        <textarea data-template>
+						## White text on colored background
+
+						<p style="text-align:center;">
+								<img src="images/color-example-1.png" alt="Example of white text on light colored background">
+						</p>
+						
+						<p style="text-align:center;">
+								<img class="fragment" src="images/color-example-2.png" alt="Example of white text on dark colored background">
+						</p>
+					</textarea>
+      </section>
+
+      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+        <textarea data-template>
+						## Flipping the contrast
+
+						<p style="text-align:center;">
+							<img src="images/color-example-3.png" alt="Example of black text on light colored background">
+						</p>
+						
+					</textarea>
+      </section>
+
+      <!-- Alternate text -->
+      <section data-markdown data-background="/img/2019/devsummit/bg-6.png">
+        <textarea data-template>
 						## Alternate text
 
 						- [WCAG 1.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html): Non-text content has text alternative. 
 						- If image is decorative, use `alt=""`.
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Write effective alternate text
 
 						- Think about how users will be doing with the information
@@ -149,19 +191,19 @@
 						- Be succinct
 						- No need to use the phrase "image of ..." to describe images
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Alternate text demo
 
 						- [Empty alt](https://developers.arcgis.com/javascript/latest/sample-code/widgets-basemapgallery/live/index.html)
 						- [Descriptive alt](https://story.maps.arcgis.com/apps/MapJournal/index.html?appid=2b1c793f464b4cd2944a0b9700c0dc48)
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Landmark
 
 						Use both HTML 5 elements and ARIA landmarks in the same element.
@@ -174,10 +216,10 @@
 						| `<footer>` | `role="contentinfo"` |
 						<p style="margin-top: 1.5em; font-size: 0.8em;">Reference: <a href="https://www.scottohara.me/blog/2018/03/03/landmarks.html">Accessible Landmarks</a></p>
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Focus and tab order
 
 						<ul>
@@ -191,10 +233,10 @@
 							keyboard focus within subsections.</li>
 						</ul>
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="/img/2019/devsummit/bg-6.png">
-					<textarea data-template>
+      <section data-markdown data-background="/img/2019/devsummit/bg-6.png">
+        <textarea data-template>
 						## Focus
 
 						Don't do this:
@@ -205,19 +247,19 @@
 						}
 						```
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Focus
 
 						Keep the browser's default focus styling.  
 						Or implement custom focus style.
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Tab order
 
 						<p style="text-align: left; margin-left: 25px;">Tab order should match intended reading order.</p>
@@ -226,10 +268,10 @@
 						- `tabindex="-1"`: necessary for programmatically moving focus (e.g., error message, menus, radio buttons, etc.)
 						- `tabindex="3"`: anti-pattern.
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## The `<button>` element
 
 						<p style="text-align: left;">When you use `<button>` element, you get a lot of functionality for free:</p>
@@ -238,20 +280,20 @@
 						- Screen readers will announce the button in focus and offer ways to click the button.
 						- Space and Enter keys are automatically supported when binding a click event listener to a button.
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Semantic HTML
 
 						- Choose the right HTML element to reflect content structure and meaning.
 						- `<div>` and `<span>` are semantically neutral.
 						- Significantly more work to polyfill the missing semantic information and expected behavior.
 					</textarea>
-				</section>
+      </section>
 
-				<section data-markdown data-background="/img/2019/devsummit/bg-3.png">
-					<textarea data-template>
+      <section data-markdown data-background="/img/2019/devsummit/bg-3.png">
+        <textarea data-template>
 						## Dialog
 
 						- When a dialog opens, focus moves to an element inside the dialog.
@@ -260,43 +302,57 @@
 
 						<p style="margin-top: 1.5em; font-size: 0.8em;">Reference: <a href="http://w3c.github.io/aria-practices/#dialog_modal">ARIA Best Practices - Dialog</a></p>
 					</textarea>
-				</section>
+      </section>
 
 
-				<!-- ESRI LOGO SLIDE: -->
-				<section data-markdown data-background="img/2019/devsummit/bg-esri.png">
-				</section>
+      <!-- ESRI LOGO SLIDE: -->
+      <section data-markdown data-background="img/2019/devsummit/bg-esri.png">
+      </section>
 
-				<!-- SURVEY SLIDE: -->
-				<section data-markdown data-background="img/2019/devsummit/bg-rating.png">
-				</section>
+      <!-- SURVEY SLIDE: -->
+      <section data-markdown data-background="img/2019/devsummit/bg-rating.png">
+      </section>
 
 
-			</div>
-		</div>
+    </div>
+  </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				// This height and width are here for the left-aligned title slide.
-				// If you do not want that, you can remove these two settings and
-				// the presentation will be closer to OOTB-Reveal.js:
-				width: '100%',
-				height: '100%',
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      // This height and width are here for the left-aligned title slide.
+      // If you do not want that, you can remove these two settings and
+      // the presentation will be closer to OOTB-Reveal.js:
+      width: '100%',
+      height: '100%',
 
-				history: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+      history: true,
+      dependencies: [{
+          src: 'plugin/markdown/marked.js'
+        },
+        {
+          src: 'plugin/markdown/markdown.js'
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        }
+      ]
+    });
+
+  </script>
+</body>
+
 </html>
