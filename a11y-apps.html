@@ -49,6 +49,10 @@
       max-width: 80%;
     }
 
+    .reveal pre code {
+      font-size: 110%;
+    }
+
   </style>
 
   <!-- Printing and PDF exports -->
@@ -182,7 +186,9 @@
         <h3>Structure example</h3>
         <pre><code>
             <h2>Popup settings</h2>
-            <span class="heading-2">Popup settings</span> <!-- Don't do this -->
+
+            <!-- Don't do this -->
+            <span class="heading-2">Popup settings</span> 
             </code></pre>
 
 
@@ -294,8 +300,9 @@
                 ## Do not remove focus
                 
                 ```css
+                /* Don't do this */
                 *:focus {
-                    outline: none; /* Don't do this */
+                    outline: none; 
                 }
                 ```
                 
@@ -336,7 +343,8 @@
                 
                 ```html
                 <menu-list>
-                <!-- After the user presses the down arrow key, focus the next available child -->
+                <!-- After the user presses the down arrow key, 
+                  focus the next available child -->
                 <menu-item tabindex="0">Map</menu-item>
 
                 <!-- call .focus() on this element -->
