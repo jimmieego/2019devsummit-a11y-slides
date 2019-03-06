@@ -44,14 +44,16 @@ require([
   view.ui.add(splashButton, "top-left");
 
   splashButton.addEventListener("click", function () {
-    window.calcite.bus.emit("modal:open", {
+    document.getElementById("myModal").classList.add("is-active");
+    /*window.calcite.bus.emit("modal:open", {
       id: "splash"
-    });
+    });*/
   });
 
-  /*window.calcite.bus.emit("modal:open", {
-    id: "splash"
-  });*/
+  window.calcite.bus.on("modal:close", function () {
+    splashButton.focus();
+  });
+
   // View is ready
   view.when(function () {
     updateUI(view);
