@@ -37,5 +37,8 @@
     "mustache": "^2.3.0",
     "socket.io": "^2.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "fstream": "^1.0.12"
+  }
 }
