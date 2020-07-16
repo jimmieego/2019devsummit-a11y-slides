@@ -41,7 +41,7 @@
   "dependencies": {
     "diff": "^4.0.1",
     "fstream": "^1.0.12",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "lodash.mergewith": "^4.6.2"
   }
 }
